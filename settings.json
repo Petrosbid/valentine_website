@@ -1,0 +1,103 @@
+{
+  "appSettings": {
+    "title": "ولنتاین مبارک عشقم ❤️",
+    "language": "fa",
+    "direction": "rtl",
+    "fontFamily": "'Vazirmatn', sans-serif",
+    "backgroundColor": "#0a0005"
+  },
+  "fonts": {
+    "mainFontUrl": "https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap",
+    "scriptFontUrl": "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+  },
+  "libraries": {
+    "threeJsUrl": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js",
+    "gsapUrl": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "confettiUrl": "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"
+  },
+  "music": {
+    "audioSource": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    "initialVolume": 0.7
+  },
+  "slides": [
+    {
+      "id": "slide1",
+      "textContent": "اوخ اوخ میدونی چی شد؟",
+      "type": "text-only"
+    },
+    {
+      "id": "slide2",
+      "textContent": "یهو به خودم اومدم و دیدم...",
+      "type": "text-only"
+    },
+    {
+      "id": "slide3",
+      "textContent": "شدی قشنگ‌ترین دلیل واسه خندیدنم :)",
+      "type": "text-only"
+    },
+    {
+      "id": "slide4",
+      "textContent": "چقدر کنار هم قشنگیم...",
+      "type": "gallery",
+      "galleryImages": [
+        {
+          "src": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400",
+          "alt": "1",
+          "transform": "rotate(-10deg) translate(-20px, 0)"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400",
+          "alt": "2",
+          "transform": "rotate(5deg) translate(20px, -10px)",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "slide5",
+      "textContent": "حالا میخوام یه چیزی ازت بپرسم...",
+      "type": "text-only"
+    },
+    {
+      "id": "proposalSlide",
+      "textContent": "ولنتاین من میشی؟",
+      "type": "proposal",
+      "buttons": {
+        "yes": {
+          "text": "بله! ❤️",
+          "className": "yes-btn"
+        },
+        "no": {
+          "text": "نه",
+          "className": "no-btn"
+        }
+      }
+    }
+  ],
+  "letterContent": {
+    "header": "برای عشق زندگیم",
+    "paragraphs": [
+      "عزیز دلم،",
+      "این نامه رو مینویسم که بدونی چقدر برام عزیزی. تو فقط عشق من نیستی، تو بهترین رفیق و همراه منی.",
+      "ممنونم که اومدی تو زندگیم و دنیام رو قشنگ‌تر کردی..Promise میدم همیشه کنارت باشم.",
+      "ولنتاینت مبارک قشنگ‌ترینم ❤️"
+    ],
+    "signature": "Love You Forever"
+  },
+  "animations": {
+    "confettiColors": ["#940325", "#B33563", "#ffffff"],
+    "confettiParticleCount": 150,
+    "confettiSpread": 80
+  },
+  "messages": {
+    "tapHint": "",
+    "funnyNoResponses": ["نچ!", "عمرا!", "نه بابا؟", "دلت میاد؟", "فقط بله!", "عه؟", "اصلا راه نداره!"]
+  },
+  "colors": {
+    "primaryAccent": "#900525",
+    "secondaryAccent": "#832447",
+    "envelopeColor": "#800020",
+    "envelopeFlapColor": "#7D1538",
+    "envelopePocketColor": "#470616"
+  }
+}

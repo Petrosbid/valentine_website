@@ -1,0 +1,51 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="Django" />
+          <option value="asgiref" />
+          <option value="PyMySQL" />
+          <option value="pillow" />
+          <option value="whitenoise" />
+          <option value="social-auth-app-django" />
+          <option value="social-auth-core" />
+          <option value="django-ckeditor" />
+          <option value="django-js-asset" />
+          <option value="kavenegar" />
+          <option value="django-daisy" />
+          <option value="jdatetime" />
+          <option value="jalali_core" />
+          <option value="pytz" />
+          <option value="tzdata" />
+          <option value="requests" />
+          <option value="colorama" />
+          <option value="setuptools" />
+          <option value="sqlparse" />
+          <option value="gunicorn" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="Backend.gardens.serializers.*" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
+  </profile>
+</component>

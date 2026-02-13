@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title id="pageTitle">ولنتاین مبارک عشقم ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source id="musicSource" src="" type="audio/mpeg">
+    </audio>
+
+    <div class="music-control" id="musicBtn">
+        <svg class="music-icon" id="iconPlay" viewBox="0 0 24 24" style="display: none;">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+        <svg class="music-icon" id="iconMute" viewBox="0 0 24 24">
+            <path d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4v-1.73L19.73 21 21 19.73 4.27 3zM14 7h4V3h-6v5.18l2 2z"/>
+        </svg>
+    </div>
+
+    <div class="content-layer">
+        <div class="tap-hint" id="tapHint"></div>
+
+        <!-- Slides will be dynamically generated from settings -->
+        <div id="slidesContainer">
+            <!-- Slides will be inserted here by JavaScript -->
+        </div>
+
+        <div class="envelope-wrapper" id="envelopeWrapper">
+            <div class="envelope" id="envelope">
+                <div class="envelope-back"></div>
+                <div class="letter-content"></div>
+                <div class="envelope-pocket"></div>
+                <div class="envelope-flap"></div>
+                <div class="heart-seal">❤️</div>
+            </div>
+            <p style="position: absolute; bottom: 20%; color: #fff; font-weight: 700;"></p>
+        </div>
+
+        <div class="full-letter" id="fullLetter">
+            <!-- Letter content will be dynamically populated from settings -->
+        </div>
+    </div>
+
+    <!-- Embed settings as a JavaScript variable for fallback when opened directly in browser -->
+    <script>
+        // Define settingsData variable with the settings content as fallback
+        var settingsData = {
+  "appSettings": {
+    "title": "ولنتاین مبارک عشقم ❤️",
+    "language": "fa",
+    "direction": "rtl",
+    "fontFamily": "'Vazirmatn', sans-serif",
+    "backgroundColor": "#0a0005"
+  },
+  "fonts": {
+    "mainFontUrl": "https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap",
+    "scriptFontUrl": "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+  },
+  "libraries": {
+    "threeJsUrl": "https://cdnjs.cloudflare.com/ajax.com/ajax/libs/three.js/r128/three.min.js",
+    "gsapUrl": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "confettiUrl": "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"
+  },
+  "music": {
+    "audioSource": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    "initialVolume": 0.7
+  },
+  "slides": [
+    {
+      "id": "slide1",
+      "textContent": " میدونی چی شد؟",
+      "type": "text-only"
+    },
+    {
+      "id": "slide2",
+      "textContent": "یهو به خودم اومدم و دیدم...",
+      "type": "text-only"
+    },
+    {
+      "id": "slide3",
+      "textContent": "شدی قشنگ‌ترین دلیل واسه خندیدنم :)",
+      "type": "text-only"
+    },
+    {
+      "id": "slide4",
+      "textContent": "چقدر کنار هم قشنگیم...",
+      "type": "gallery",
+      "galleryImages": [
+        {
+          "src": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400",
+          "alt": "1",
+          "transform": "rotate(-10deg) translate(-20px, 0)"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400",
+          "alt": "2",
+          "transform": "rotate(5deg) translate(20px, -10px)",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "slide5",
+      "textContent": "حالا میخوام یه چیزی ازت بپرسم...",
+      "type": "text-only"
+    },
+    {
+      "id": "proposalSlide",
+      "textContent": "ولنتاین من میشی؟",
+      "type": "proposal",
+      "buttons": {
+        "yes": {
+          "text": "بله! ❤️",
+          "className": "yes-btn"
+        },
+        "no": {
+          "text": "نه",
+          "className": "no-btn"
+        }
+      }
+    }
+  ],
+  "letterContent": {
+    "header": "برای عشق زندگیم",
+    "paragraphs": [
+      "عزیز دلم،",
+      "این نامه رو مینویسم که بدونی چقدر برام عزیزی. تو فقط عشق من نیستی، تو بهترین رفیق و همراه منی.",
+      "ممنونم که اومدی تو زندگیم و دنیام رو قشنگ‌تر کردی..Promise میدم همیشه کنارت باشم.",
+      "ولنتاینت مبارک قشنگ‌ترینم ❤️"
+    ],
+    "signature": "Love You Forever"
+  },
+  "animations": {
+    "confettiColors": ["#940325", "#B33563", "#ffffff"],
+    "confettiParticleCount": 150,
+    "confettiSpread": 80
+  },
+  "messages": {
+    "tapHint": "",
+    "funnyNoResponses": ["نچ!", "عمرا!", "نه بابا؟", "دلت میاد؟", "فقط بله!", "عه؟", "اصلا راه نداره!"]
+  },
+  "colors": {
+    "primaryAccent": "#900525",
+    "secondaryAccent": "#832447",
+    "envelopeColor": "#800020",
+    "envelopeFlapColor": "#7D1538",
+    "envelopePocketColor": "#470616"
+  }
+};
+        // Settings will be loaded from settings.json by script.js when possible
+    </script>
+    
+    <!-- Load script (settings will be loaded via JavaScript) -->
+    <script src="script.js"></script>
+</body>
+</html>
