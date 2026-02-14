@@ -16,7 +16,7 @@
     "confettiUrl": "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"
   },
   "music": {
-    "audioSource": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    "audioSource": "https://dls.musics-fa.com/tagdl/1402/Mansoor%20-%20Yeki%20Bood%20Yeki%20Nabood%20(320).mp3",
     "initialVolume": 0.7
   },
   "slides": [
