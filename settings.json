@@ -51,12 +51,12 @@
       "type": "gallery",
       "galleryImages": [
         {
-          "src": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400",
+          "src": "https://s8.uupload.ir/files/photo_2026-02-14_23-30-45_vb07.jpg",
           "alt": "1",
           "transform": "rotate(-10deg) translate(-20px, 0)"
         },
         {
-          "src": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400",
+          "src": "https://s8.uupload.ir/files/photo_2026-02-14_23-27-43_zror.jpg",
           "alt": "2",
           "transform": "rotate(5deg) translate(20px, -10px)",
           "zIndex": 2
